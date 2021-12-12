@@ -1,46 +1,29 @@
 <?php 
+require 'class_composants/competence.php';
 $array_competence=array(
-    array("performance"=>"developpement front-end", 
-    "langage_manipule"=>"HTML5,SASS,VueJS,Angular,JavaFx",
-    "niveau_competence"=>80),
-    array("performance"=>"developpement back-end", 
-    "langage_manipule"=>"NodeJs,Drupal 8,Laravel,Java EE 7",
-    "niveau_competence"=>70),
-    array("performance"=>"developpement mobile", 
-    "langage_manipule"=>"Android Kotlin,IOS Swift,Cordova,Flutter",
-    "niveau_competence"=>77),
-    array("performance"=>"UI/UX Design", 
-    "langage_manipule"=>"photoshop CC,Adobe XD,Material Design",
-    "niveau_competence"=>60),
-    array("performance"=>"Base de donnees & big data", 
-    "langage_manipule"=>"Android Kotlin,IOS Swift,Cordova,Flutter",
-    "niveau_competence"=>90),
-    array("performance"=>"outils/Environnements", 
-    "langage_manipule"=>"visual paradigm,Git,Docker,K8s,Linux",
-    "niveau_competence"=>80),
+    new competence("developpement front-end",80,"HTML5,SASS,VueJS,Angular,JavaFx"),
+
+    new competence("developpement back-end",70,"NodeJs,Drupal 8,Laravel,Java EE 7"),
+
+    new competence("developpement mobile",77,"Android Kotlin,IOS Swift,Cordova,Flutter"),
+
+    new competence("UI/UX Design",60 ,"photoshop CC,Adobe XD,Material Design"),
+
+   new competence ("Base de donnees & big data",90,"Android Kotlin,IOS Swift,Cordova,Flutter"),
+
+    new competence ("outils/Environnements",80,"visual paradigm,Git,Docker,K8s,Linux"),
 
     )
 
 ?>
+
 <div class="">
 
     <?php 
     foreach($array_competence as $competence){
+        $competence->get_competence();
     ?>
 
-    <div class="competence ">
-        <input checked type="checkbox" class="check">
-        <div class="details">
-            <div class="skill">
-                <h4><?=$competence["performance"]?></h4>
-                <i class="fas fa-star" style="color: rgb(231, 36, 36); margin-top: 5px;"></i>
-            </div>
-            <p class="lite_gray"><?=$competence["langage_manipule"]?></p>
-            <div class="niveau-competence">
-                <div class="progress" style="width: <?=$competence['niveau_competence']?>%"><span class="rond" ></span></div>
-            </div>
-        </div>
-    </div>
 
     <?php } ?>
 <!-- 
@@ -113,6 +96,7 @@ $array_competence=array(
                 <div class="progress p_85"><span class="rond"></span></div>
             </div>
         </div>
-    </div> -->
+    </div> 
+-->
 
 </div>

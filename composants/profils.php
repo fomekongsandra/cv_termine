@@ -1,9 +1,11 @@
 <?php
-$array_information= array( 
-    "naissance"=>"nee le 20 septembre 2000",
-    "origine"=>" l'ouest cameroun ",
-    "statut"=>"celibataire ,0 enfants .sante RAS",
-"quartier"=>" bonamoussadi",
+$array_information= array(
+    new personne( 
+    "fomekong ","sandra",
+    "nee le 20 septembre 2000",
+    " l'ouest cameroun ",
+    "celibataire ,0 enfants .sante RAS",
+" bonamoussadi",
     "pays"=>"Douala-Cameroun ",
     "map"=>" 4.053276, 9.765047",
 "photo_profil"=>"petitephoto.jpg",
@@ -46,7 +48,7 @@ $array_information= array(
                 <div class="header-img" style="margin-top: 35px;">
                     <img src="<?=$array_information['photo_profil']?>" alt="" style="margin-left: 40px; border-radius: 40px;">
                 <div class="name-cv" style="margin-left: 20px;">
-                        <span class="nom" style="font-size: 25px;"><b>Sandra Fomekong</b></span><br>
+                        <span class="nom" style="font-size: 25px;"><b><?=$array_information['nom']?></b></span><br>
                         <span style="color: #aaa;">Architecte logiciel / DevOps</span>
                 </div>
             </div>
@@ -55,9 +57,28 @@ $array_information= array(
 
 </div>
 <div class="information_personnelle">
-                <span class="btn_plus"><span>+</span></span>
+              <div class="dropdown">
+                 <div class="btn_plus"  id="btn" ><i class="fas fa-plus fa-3x" id="btnplus" ></i>
+                 <i class="fas fa-times fa-3x" id="btnfois" style="display: none;"></i>
+                </div>
 
-                <div class="groupe_information_personnelle">
+                 <div class="btnsend" id="plus">
+                        <a class="awe"><i class="fas fa-arrow-circle-down fa-2x" style="text-decoration:none; color:#fff;" ></i></a><br> 
+                        <a data-bs-toggle="modal" data-bs-target="#myModal" class="awi"><i class="fas fa-share-alt-square fa-2x"  style="text-decoration: none;color:#fff;"></i> </a><br> 
+                        <a id="btn_editer" class="awu"><i class="fas fa-pencil fa-2x" style="text-decoration: none;color:#fff;"></i></i></a><br> 
+                  </div>  
+                 <!-- <form action="" class="alert">
+                     <label for="email">email;</label>
+                     <input type="text" placeholder="entrer votre email">
+                     <label for="objet"> objet:</label>
+                     <input type="text" placeholder="entrer votre objet">
+
+                 </form> -->
+                        
+                 
+              </div>
+                  
+                  <div class="groupe_information_personnelle">
                     <div class="info_personnelle">
                         <i class="fas fa-birthday-cake fa-3x"></i>
                         <div class="anniv">
@@ -67,7 +88,6 @@ $array_information= array(
                             <p>Celibataire , 0 enfants . Sante RAS</p><br>
                             <hr>
                         </div>
-
                     </div>
                     <div class="info_personnelle">
                         <i class="fas fa-map-marker-alt fa-3x"></i>
@@ -114,4 +134,57 @@ $array_information= array(
                     </div>
                 </div>
 
+                <!-- The Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: black; font-size: 20px;">Partager par mail</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body"  style="height: 100%;">
+                <form method="post" action="composants/envoiemail.php">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label" style="color: black; font-weight:bold;font-style:10px;">Email:</label>
+                        <input type="email" class="form-control" id="receptionEmail" name="receptionEmail" style="width: 95%;" placeholder="exemple@gmail.com..." required>
+
+                        <div class="modal-footer" style="display: flex; justify-content:space-between">
+                            <button type="reset" class="btn btn-secondary" style="background-color: blue;">Annuler</button>
+                            <button type="submit" name="sendEmailButton" class="btn btn-primary" >Envoyer</button>
+                        </div>
+                        <footer>
+                            <div><i class="fas fa-file-pdf fa-5x" style="color: brown;"></i></div>
+                        </footer>
+                       
+                    </div>
+                </form>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+            <script>
+                let btnplus =document.getElementById("btnplus");
+                btnplus.addEventListener('click',affiche,false);
+                let btnfois =document.getElementById("btnfois");
+                btnfois.addEventListener('click',fermer,false);
+
+                let plus=document.getElementById("plus");
+               
+
+                function affiche(){
+
+                    plus.style.display="block";
+                    btnplus.style.display="none";
+                    btnfois.style.display="block";
+                }
+                function fermer(){
+                    plus.style.display="none";
+                    btnfois.style.display="none";
+                    btnplus.style.display="block";
+                }
+            </script>
+            </div>    

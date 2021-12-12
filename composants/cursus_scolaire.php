@@ -1,15 +1,14 @@
 <?php
 $array_cursus=array(
-     array("diplome"=>"DIPET 2 Electronique " ,"ecole"=>"@ENSET de Douala","annee_obtention"=>"Aout 2016",
-"acquisition"=>"Gestion d'eclairage d'une maison(Android + Arduino)"),
-array("diplome"=>"  Oracle Certified Associate " ,"ecole"=>"@Kentnix Sarl","annee_obtention"=>"Mars 2009","acquisition"=>
+     new cursus("DIPET 2 Electronique " ,"@ENSET de Douala","Aout 2016","Gestion d'eclairage d'une maison(Android + Arduino)"),
+array( "Oracle Certified Associate " ,"@Kentnix Sarl","Mars 2009",
 "Oracle Database 11g Administration "),
-array("diplome"=> "   Oracle SQL Certified " ,"ecole"=>"@Kentnix Sarl","annee_obtention"=>"Decembre",
-"acquisition"=>"SQL 2, SQL 3, XML"),
-array("diplome"=> "Licence professionnelle" ,"ecole"=>"@Douala Institute of Tech","annee_obtention"=>"Octobre 2008 ",
-"acquisition"=>"Telecommunication & reseau"),
-array("diplome"=> "  DEC / BTS " ,"ecole"=>"@CCNB Dieppe - Canada.","annee_obtention"=>"Septembre 2007 ",
-"acquisition"=>"Electrotechnique, mention bien major"));
+array("   Oracle SQL Certified " ,"@Kentnix Sarl","Decembre",
+"SQL 2, SQL 3, XML"),
+array("Licence professionnelle" ,"@Douala Institute of Tech","Octobre 2008 ",
+"Telecommunication & reseau"),
+array("  DEC / BTS " ,"@CCNB Dieppe - Canada.","Septembre 2007 ",
+"Electrotechnique, mention bien major"));
 ?>
 
 
@@ -23,7 +22,9 @@ array("diplome"=> "  DEC / BTS " ,"ecole"=>"@CCNB Dieppe - Canada.","annee_obten
                 <p class="header_subtitle lite_gray">Diplomes et formations certifiantes</p>
             </div>
         </div>
-
+        <button class="buton_editer">
+        <i class="fas fa-pencil fa-2x " style="color: #fff;"></i>
+        </button>
         <div class="icon"><i class="fas fa-ellipsis-v fa-2x"></i></div>
 
     </div>
@@ -32,14 +33,9 @@ array("diplome"=> "  DEC / BTS " ,"ecole"=>"@CCNB Dieppe - Canada.","annee_obten
 
             <?php 
             foreach($array_cursus as $cursus){
+                $cursus->get_experience_aca()
             ?>
-            <div class="profession">
-                <p class="title"> <?= $cursus['diplome'] ?>- <span class="location"><?= $cursus['ecole'] ?></span></p>
-                <p class="date_cursus_role"> <span class="date"><?= $cursus['annee_obtention'] ?>- </span> &nbsp; <span
-                        class="cursus_role"><?= $cursus['acquisition'] ?>
-                    </span> </p>
-                <hr>
-            </div>
+            
 
             <?php } ?>
 

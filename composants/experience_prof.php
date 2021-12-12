@@ -1,23 +1,23 @@
 <?php 
+require 'class_composants/experience_prof.php';
 $array_experience_prof=array(
-     array("mission"=>"chef de projet technologiques " ,"entreprise"=>"@Ets.M DE M",
-     "periode"=>"De juillet 2019 a ce jour -http//mdem.cm",
-    "poste"=>"chef du projet annuaire-universel.cm de l'ART "),
-    array("mission"=>"fondateur &DT " ,"entreprise"=>"-@Startup chickDev",
-    "periode"=>"De juin 2015 a ce jour -http//chickdev.cm",
-   "poste"=>"realisation de plusieurs sites web et applications web et mobiles "),
-   array("mission"=>"Enseignant " ,"entreprise"=>"-@Institut universitaire de la cote",
-   "periode"=>"De juin octobre 2011 a ce jour -http//istdi.net",
-  "poste"=>"Analyse UML & MERISE,BD/SQL ORACLE &MYSQL,DEV, IOS & Android,   BI &Big Data Talennd DI & Hadoop,
-  1<sup>ere</sup>, 2<sup>eme</sup> et 4<sup>eme</sup> annee "),
-  array("mission"=>"Developpeur en chef " ,"entreprise"=>"-@Karyroual group",
-  "periode"=>"De Mai 2013 a juin 2015 -http//khayroual.com",
- "poste"=>"realisation de multiples projets logiciels et  web,infographie "),
+    new experience_prof("chef de projet technologiques","@Ets.M DE M"," juillet 2019", "  ce jour ", "-http//mdem.cm","chef du projet annuaire-universel.cm de l'ART "),
+
+    new experience_prof("fondateur&DT","-@Startup chickDev","juin 2015" , "ce jour", "-http//chickdev.cm","realisation de plusieurs sites web et applications web et mobile"),
+
+   new experience_prof("Enseignant ","-@Institut universitaire de la cote","juin octobre 2011", "ce jour" ,"-http//istdi.net",
+   "Analyse UML & MERISE,BD/SQL ORACLE &MYSQL,DEV, IOS & Android BI &Big Data Talennd DI & Hadoop",
+  "1<sup>ere</sup>, 2<sup>eme</sup> et 4<sup>eme</sup> annee "),
+
+  new experience_prof("Developpeur en chef" ,"-@Karyroual group",
+  "Mai 2013" ,"juin 2015 ","-http//khayroual.com",
+  "realisation de multiples projets logiciels et  webinfographie"),
    
- array("mission"=>"responsable commercial " ,"entreprise"=>"-@BAO Sarl",
- "periode"=>"De Decembre 2012 a juin 2013    -http//bao.sarl.com",
-"poste"=>"definition des strategies commerciales ,controle de quqlite ,suivi... "),
-);
+ new experience_prof ("responsable commercial","-@BAO Sarl",
+ "Decembre 2012" , "juin 2013 ","-http//bao.sarl.com",
+"definition des strategies commerciales controle de qualite ,suivi... "),
+
+)
 
 ?>
 
@@ -29,7 +29,9 @@ $array_experience_prof=array(
                         <p class="header_subtitle lite_gray">Expertise en entreprise</p>
                     </div>
                 </div>
-
+                <button class="buton_editer">
+                  <i class="fas fa-pencil fa-2x " style="color: #fff;"></i>
+                </button>
                 <div class="icon"><i class="fas fa-ellipsis-v fa-2x"></i></div>
 
             </div>
@@ -37,15 +39,10 @@ $array_experience_prof=array(
 
                 <div class="professional_experience" >
                 <?php 
-            foreach($array_experience_prof as $expereience){
+            foreach($array_experience_prof as $experience){
+                $experience->get_experience_prof()
             ?>
-            <div class="profession">
-                <p class="title"> <?= $expereience['mission'] ?>- <span class="location"><?= $expereience['entreprise'] ?></span></p>&nbsp;
-                <p class="date_cursus_role"> <span class="date"><?= $expereience['periode'] ?>- </span><br> <span
-                        class="cursus_role"><?= $expereience['poste'] ?>
-                    </span> </p>
-                <hr>
-            </div>
+        
 
             <?php } ?>
 
@@ -87,3 +84,4 @@ $array_experience_prof=array(
                     </div> -->
                 </div>
                 </div>
+               
