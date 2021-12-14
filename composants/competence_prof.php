@@ -1,5 +1,4 @@
 <?php 
-require 'class_composants/competence.php';
 $array_competence=array(
     new competence("developpement front-end",80,"HTML5,SASS,VueJS,Angular,JavaFx"),
 

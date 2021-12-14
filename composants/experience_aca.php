@@ -1,14 +1,16 @@
 <?php
 $array_cursus=array(
-     new cursus("DIPET 2 Electronique " ,"@ENSET de Douala","Aout 2016","Gestion d'eclairage d'une maison(Android + Arduino)"),
-array( "Oracle Certified Associate " ,"@Kentnix Sarl","Mars 2009",
+     new experience_aca("DIPET 2 Electronique " ,"@ENSET de Douala","Aout 2016","Gestion d'eclairage d'une maison(Android + Arduino)"),
+new experience_aca( "Oracle Certified Associate " ,"@Kentnix Sarl","Mars 2009",
 "Oracle Database 11g Administration "),
-array("   Oracle SQL Certified " ,"@Kentnix Sarl","Decembre",
+new experience_aca("Oracle SQL Certified " ,"@Kentnix Sarl","Decembre 2008",
 "SQL 2, SQL 3, XML"),
-array("Licence professionnelle" ,"@Douala Institute of Tech","Octobre 2008 ",
+new experience_aca("Licence professionnelle" ,"@Douala Institute of Tech","Octobre 2008 ",
 "Telecommunication & reseau"),
-array("  DEC / BTS " ,"@CCNB Dieppe - Canada.","Septembre 2007 ",
-"Electrotechnique, mention bien major"));
+
+new experience_aca("DEC / BTS " ,"@CCNB Dieppe - Canada.","Septembre 2007 ",
+"programmation appliquee pour internet"),
+new experience_aca("baccalaureat","@Lycee technique  de Douala Bassa","juin 2005","Electrtechnique,mention BIEN(major de centre)"));
 ?>
 
 

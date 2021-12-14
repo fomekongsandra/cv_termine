@@ -10,13 +10,13 @@
         }
         public function get_experience_aca(){
             echo' <div class="profession">
-            <p class='.$this->diplome.'- <span class="location">'.$this->ecole.'</span></p>
-            <p class="date_cursus_role">t'.$this->annee_obt.'- </span> &nbsp; <span
+            <p class="title">'.$this->diplome.'- <span class="location">'.$this->ecole.'</span></p>
+            <p class="date_cursus_role"> <span class="date">'.$this->annee_obt.'- </span> <span
                     class="cursus_role">'.$this->aquisition.'
                 </span> </p>
             <hr>
-        </div>
-'
-     }
-        }
+        </div>';
+
+    }
+  }
 ?>

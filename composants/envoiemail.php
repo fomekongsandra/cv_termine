@@ -17,7 +17,7 @@
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = 'fomekongsandra2@gmail.com';                     //SMTP username
-        $mail->Password   = 'Christelle3';                               //SMTP password
+        $mail->Password   = 'Christelle@237';                               //SMTP password
         $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
@@ -33,7 +33,7 @@
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'mon cv';
-        $mail->Body    = $body;
+        $mail->Body    = $body; 
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     
         $mail->send();

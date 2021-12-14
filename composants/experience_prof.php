@@ -1,5 +1,4 @@
 <?php 
-require 'class_composants/experience_prof.php';
 $array_experience_prof=array(
     new experience_prof("chef de projet technologiques","@Ets.M DE M"," juillet 2019", "  ce jour ", "-http//mdem.cm","chef du projet annuaire-universel.cm de l'ART "),
 

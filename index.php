@@ -1,3 +1,12 @@
+<?php 
+require 'class_composants/personne.php' ;
+require 'class_composants/competence.php';
+require 'class_composants/experience_aca.php';
+require 'class_composants/experience_prof.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +53,7 @@
 
            require('composants/divertissement.php');
 
-          require('composants/cursus_scolaire.php');
+          require('composants/experience_aca.php');
           ?>
 
         </section>
