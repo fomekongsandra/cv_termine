@@ -1,22 +1,5 @@
 <?php
-$array_personne= new personne( 
-    "fomekong ","sandra",
-    "nee le 20 septembre 2000",
-    " l'ouest cameroun ",
-    "celibataire ,0 enfants .sante RAS",
-" bonamoussadi",
-    "Douala","Cameroun ",
-    " 4.053276, 9.765047",
-"../petitephoto.jpg",
-"../photocouverture.jpg",
-"695728775",
-"Mobile, Telegram, Whatsapp",
-"fomekongsandra2@gmail.com",
-"Google+, Twitte, LinkedIn, Github",
-"+45projets",
-"+31conctats",
-"12 ans exp");
-    
+$array_personne=  Data::get_data_profile();
 
 
 ?>
@@ -70,9 +53,12 @@ $array_personne= new personne(
                 btnplus.addEventListener('click',affiche,false);
                 let btnfois =document.getElementById("btnfois");
                 btnfois.addEventListener('click',fermer,false);
+                
+                
+
 
                 let plus=document.getElementById("plus");
-               
+                
 
                 function affiche(){
 
@@ -85,4 +71,7 @@ $array_personne= new personne(
                     btnfois.style.display="none";
                     btnplus.style.display="block";
                 }
+
+               
             </script>
+

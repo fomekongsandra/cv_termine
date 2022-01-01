@@ -615,30 +615,16 @@ hr {
  @media screen and (max-width: 667px) {
 }
 .buton_editer{
-    border-radius: 50px;
+ border-radius: 50px;
 background: #28292b;
-/* box-shadow:  9px 9px 18px #524545,
-             -9px -9px 18px #705d5d; */
+
 width: 50px;
 height: 50px;
 display: none;
 border: none;
 cursor: pointer;
 transition:all 500ms ease-in-out ;
-    /* width: 150px;
-    height: 40px;
-    border-radius: 3px;
-    background:transparent;
-    color:#fff;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 500ms ease-in-out;
-    border: none !important;
-    display: none ; */
+    
 }
 .buton_editer:hover{
     background-color:green;
@@ -647,7 +633,6 @@ transition:all 500ms ease-in-out ;
 }
 .editer button{
     display: block;
-
 }
 
 a{text-decoration: none;}

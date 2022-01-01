@@ -12,17 +12,17 @@
     
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->SMTPDebug = 1;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'fomekongsandra2@gmail.com';                     //SMTP username
-        $mail->Password   = 'Christelle@237';                               //SMTP password
-        $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
-        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->Username   = 'sandrafomekong21@gmail.com';                     //SMTP username
+        $mail->Password   = 'Douanla@2019';                               //SMTP password
+        $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+        $mail->Port       = 25;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
-        $mail->setFrom('fomekongsandra2@gmail.com', 'fomekongsandra');
+        $mail->setFrom('sandrafomekong21@gmail.com', 'fomekongsandra');
         $mail->addAddress($email);     //Add a recipient
     
         ob_start();
@@ -35,7 +35,13 @@
         $mail->Subject = 'mon cv';
         $mail->Body    = $body; 
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-    
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+            )
+            );
         $mail->send();
         echo 'Message has been sent';
     } catch (Exception $e) {

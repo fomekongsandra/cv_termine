@@ -1,7 +1,9 @@
+<body>
+
 <?php
     class personne{
 
-        public function __construct(public $nom_personne,public $prenom_personne, public $date_naissance,public $origine,public $statut,public $quartier
+        public function __construct(public $nom_personne,public $prenom_personne, public $role,public $date_naissance,public $origine,public $statut,public $quartier
         ,public $ville,public $pays,public $map,public $photo_profil,public $photo_couverture,public $telephone,public $reseaux_sociaux,
     public $email,public $sociaux_media,public $nbre_projet,public $contrat,public $annee_exp)
 
@@ -9,6 +11,7 @@
 
             $this->nom_personne=$nom_personne;
             $this->prenom_personne=$prenom_personne;
+            $this->role=$role;
             $this->date_naissance=$date_naissance;
             $this->origine=$origine ;
             $this->statut=$statut;
@@ -38,12 +41,18 @@
         public function get_prenom_personne(){
             return $this->prenom_personne;
         }
+        public function get_role(){
+            return $this->role;
+        }
         public function get_date_naissance(){
             return $this->date_naissance;
         }
+        public function get_origine(){
+            return $this->origine;
+        }
         public function get_telephone(){
             return $this->telephone;
-        }
+        } 
         public function get_ville(){
             return $this->ville;
 
@@ -89,15 +98,20 @@
 
                 <span class="divider"></span>
                 <span style="font-size: 20px; margin-right: 20px; font-weight: bold;">X</span>
-
+                <button class="buton_editer" id="openEdit">
+                <i class="fas fa-pencil fa-2x " style="color: #fff;" ></i>
+            </button>
+            
             </div>
+           
            
             <div class="header-img" style="margin-top: 35px;">
                 <img src='.$this->photo_profil.' alt="" style="margin-left: 40px; border-radius: 40px;">
             <div class="name-cv" style="margin-left: 20px;">
                     <span class="nom" style="font-size: 25px;"><b>'.$this->nom_personne.'-'.$this->prenom_personne.'</b></span><br>
-                    <span style="color: #aaa;">Architecte logiciel / DevOps</span>
+                    <span style="color: #aaa;">'.$this->role.'</span>
             </div>
+          
         </div>
 
       
@@ -173,7 +187,6 @@
                     <span></span>
                 </div>
             </div>
-
         
         ';
     }
@@ -181,3 +194,7 @@
 
     
 ?>
+<script>
+
+</script>
+</body>

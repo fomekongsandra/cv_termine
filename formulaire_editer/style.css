@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.wrapper{
+    max-width: 700px;
+    width: 100%;
+    background:#fff;
+
+}
+.wrapper .photo{
+    display: flex;
+    justify-content: space-evenly;
+}
+.wrapper .photo .photo_profil{
+    /* border-radius: 60px; */
+    margin-right: 5%;
+    background: red;
+    height: 60px;
+    width: 60px;
+    /* margin: 10px; */
+}
+.wrapper .photo .photo_cou{
+    /* border-radius: 70px; */
+    margin-right: 5%;
+    background: red;
+    height:60px;
+    width:60px;
+    /* margin: 10px;
+    margin-left: 50%; */
+
+    
+}
+.wrapper .title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+.wrapper .from .user{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+.from .user .input_field{
+    margin-bottom: 15px;
+    width: calc(100% / 2 -20px);
+    display: flex;
+    flex-direction: column;
+   
+}
+.user .input_field .input{
+    height: 45px;
+    width: 300px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-bottom-width:2px ;
+    transition:  all 0.3s ease;
+    border: none;
+    border-bottom: 3px solid blue;
+    background: transparent;
+    /* border-radius: 5px; */
+    margin: 10px;
+}
+.user .input_field .details{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}.wrapper .dernier{
+    height: 45px;
+    width: 500px;
+    /* padding-left: 10px;
+    font-size: 16px;
+    border-bottom-width:2px ;
+    transition:  all 0.3s ease;
+    border: none;
+    border-radius: 5px;
+    margin: 10px; */
+}

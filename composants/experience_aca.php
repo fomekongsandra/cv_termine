@@ -25,7 +25,7 @@ new experience_aca("baccalaureat","@Lycee technique  de Douala Bassa","juin 2005
             </div>
         </div>
         <button class="buton_editer">
-        <i class="fas fa-pencil fa-2x " style="color: #fff;"></i>
+                  <i class="fas fa-pencil fa-2x " style="color: #fff;"></i>
         </button>
         <div class="icon"><i class="fas fa-ellipsis-v fa-2x"></i></div>
 
